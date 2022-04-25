@@ -1,5 +1,5 @@
 import "./styles.css";
-import PasswordStrengthChecker from "./PasswordStrengthChecker";
+import PasswordStrengthChecker from "./components/PasswordStrengthChecker";
 import { useState } from "react";
 
 export default function App() {
@@ -11,7 +11,9 @@ export default function App() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <PasswordStrengthChecker value={password} />
+      <div style={{ width: "40%", margin: "1rem" }}>
+        <PasswordStrengthChecker password={password} />
+      </div>
     </div>
   );
 }
